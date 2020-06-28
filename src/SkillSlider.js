@@ -1,51 +1,19 @@
 import React, { useState } from 'react'
 
+import './style/SkillSlider.css'
 
-const DARKER_YELLOW = '#c7b216'
-const BEAR_TEXT = '#92491d'
-const CRIMINAL_TEXT = '#464646'
-const DARK_YELLOW = 'rgb(255, 236, 96)'
-const LIGHT_YELLOW = '#f9f4cb'
 const MAX_SKILL = 6
-
-const sliderStyle = {
-  display: 'grid',
-  gridTemplateRows: '1fr 2fr 1fr',
-  color: DARKER_YELLOW,
-  alignItems: 'center',
-  justifyItems: 'center',
-  backgroundColor: '#ffffea',
-  borderRadius: '5px',
-  boxShadow: '3px 2px 7px #be7c0bc9'
-}
-const containerStyle = {
-  display: 'grid',
-  gridTemplateColumns: `repeat(${MAX_SKILL + 1}, 1fr)`,
-  height: '100%',
-  width: '95%'
-}
-const boxStyle = {
-  display: 'grid',
-  gridTemplateRows: '1fr 3fr 1fr',
-  textAlign: 'center',
-  alignItems: 'center',
-  margin: '3px'
-}
-const boxCenterStyle = {
-  height: '80px',
-  borderRadius: '8px',
-  border: 'none',
-  outline: 'none',
-  boxShadow: 'rgba(109, 49, 5, 0.37) 0px -3px 0px 0px inset'
-}
+const START_SKILL = 3
 
 const SkillSlider = () => {
   // skill value is a measure of bear-ness
-  const [skillValue, setSkillValue] = useState(3)
+  const [skillValue, setSkillValue] = useState(START_SKILL)
 
-  return <div className='skill-slider' style={sliderStyle}>
-    <h2 style={{justifySelf: 'start', marginLeft: '30px', color: BEAR_TEXT}}> BEAR </h2>
-    <div className='skill-slider-container' style={containerStyle}>
+  return <div className='skill-slider'>
+    <div className='skill-slider-tab bear'>
+      <h2 className='skill-slider-tab-label bear'> BEAR </h2>
+    </div>
+    <div className='skill-slider-container' style={{gridTemplateColumns: `repeat(${MAX_SKILL + 1}, 1fr)`}}>
       {
         Array.from({length: MAX_SKILL + 1}).map((x, i) =>
           <SkillSliderBox
@@ -57,17 +25,19 @@ const SkillSlider = () => {
         )
       }
     </div>
-    <h2 style={{justifySelf: 'end', marginRight: '30px', color: CRIMINAL_TEXT}}> CRIMINAL </h2>
+    <div className='skill-slider-tab criminal'>
+      <h2 className='skill-slider-tab-label criminal'> CRIMINAL </h2>
+    </div>
   </div>
 }
 
 const SkillSliderBox = ({position, active, onSelect}) => {
-  return <div style={boxStyle}>
-    <h3 style={{color: BEAR_TEXT}}>{position}</h3>
-    <button onClick={() => onSelect(position)} style={{...boxCenterStyle, background: active ? DARK_YELLOW : LIGHT_YELLOW}}>
+  return <div className='skill-slider-box'>
+    <h3 className={`skill-slider-box-label bear ${active && 'active'}`}>{position}</h3>
+    <button className={`skill-slider-box-button ${active && 'active'}`} onClick={() => onSelect(position)}>
 
     </button>
-    <h3 style={{color: CRIMINAL_TEXT}}>{MAX_SKILL - position}</h3>
+    <h3 className='skill-slider-box-label criminal'>{MAX_SKILL - position}</h3>
   </div>
 }
 

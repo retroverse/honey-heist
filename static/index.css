@@ -1,6 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
 * {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
   font-family: Arial;
+
+  --light-yellow: #f9f4cb;
+  --darker-yellow: #c7b216;
+  --dark-yellow: rgb(255, 236, 96);
+  --very-light-yellow: #ffffea;
+  --criminal-text: #464646;
+  --bear-text: #92491d;
+  --criminal-font: 'Bebas Nue';
+  --bear-font: 'Indie Flower';
+}
+
+.bear {
+  color: var(--bear-text);
+  font-family: var(--bear-font);
+}
+
+.criminal {
+  color: var(--criminal-text);
+  font-family: var(--criminal-font);
 }

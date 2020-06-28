@@ -1,6 +1,7 @@
 import React from 'react'
 
 import SkillSlider from './SkillSlider'
+import CharacterBox from './CharacterBox'
 
 const appStyle = {
   width: '95%',
@@ -18,9 +19,18 @@ const headerStyle = {
   fontSize: '60px'
 }
 
+const honeyStyle = {
+  fontFamily: 'Indie Flower'
+}
+
+const heistStyle = {
+  fontFamily: 'Bebas Nue'
+}
+
 const App = () => {
   return <div className='app' style={appStyle}>
-    <h1 style={headerStyle}> Honey Heist </h1>
+    <h1 style={headerStyle}> <span style={honeyStyle}>Honey</span> <span style={heistStyle}>Heist</span> </h1>
+    <CharacterBox />
     <SkillSlider />
   </div>
 }
