@@ -1,5 +1,7 @@
 .skill-slider {
   display: grid;
+  grid-column-start: 1;
+  grid-column-end: 3;
   grid-template-rows: 1fr 4fr 1fr;
   align-items: center;
   justify-items: center;
@@ -84,4 +86,9 @@
   text-align: left;
   border-bottom-right-radius: 0px;
   border-bottom-left-radius: 0px;
+}
+
+.bear-image, .thief-image {
+  width: 25%;
+  filter: invert(32%) sepia(15%) saturate(3030%) hue-rotate(343deg) brightness(93%) contrast(89%)
 }

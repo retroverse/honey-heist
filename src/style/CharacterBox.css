@@ -1,7 +1,6 @@
 .character-box {
   width: max-content;
-  height: max-content;
-  margin-bottom: 30px;
+  height: 100%;
   padding: 20px;
   line-height: 40px;
 

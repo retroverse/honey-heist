@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 
 import './style/SkillSlider.css'
+import bearImage from '../static/bear.svg'
+import thiefImage from '../static/thief.svg'
 
 const MAX_SKILL = 6
 const START_SKILL = 3
@@ -35,10 +37,14 @@ const SkillSliderBox = ({position, active, onSelect}) => {
   return <div className='skill-slider-box'>
     <h3 className={`skill-slider-box-label bear ${active && 'active'}`}>{position}</h3>
     <button className={`skill-slider-box-button ${active && 'active'}`} onClick={() => onSelect(position)}>
-
+      {position === MAX_SKILL && <BearImage />}
+      {position === 0 && <ThiefImage />}
     </button>
     <h3 className='skill-slider-box-label criminal'>{MAX_SKILL - position}</h3>
   </div>
 }
+
+const BearImage = () => <img className='bear-image' src={bearImage}></img>
+const ThiefImage = () => <img className='thief-image' src={thiefImage}></img>
 
 export default SkillSlider
