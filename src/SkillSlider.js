@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 
+import { useQueryParam } from './hooks/queryParam'
+
 import './style/SkillSlider.css'
 import bearImage from '../static/bear.svg'
 import thiefImage from '../static/thief.svg'
@@ -9,7 +11,7 @@ const START_SKILL = 3
 
 const SkillSlider = () => {
   // skill value is a measure of bear-ness
-  const [skillValue, setSkillValue] = useState(START_SKILL)
+  const [skillValue, setSkillValue] = useQueryParam('sk', START_SKILL)
 
   return <div className='skill-slider'>
     <div className='skill-slider-tab bear'>
@@ -21,7 +23,7 @@ const SkillSlider = () => {
           <SkillSliderBox
             key={i}
             position={i}
-            active={skillValue === i}
+            active={Number(skillValue) === i}
             onSelect={pos => setSkillValue(pos)}
           />
         )

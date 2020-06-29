@@ -11,9 +11,7 @@ const NotesBox = () => {
   return <div className='notes-box bear'>
     <h3> Notes </h3>
     <div className='notes-container'>
-      <textarea spellCheck="false" value={notesValue} onChange={handleValueChange(setNotesValue)}>
-
-      </textarea>
+      <textarea spellCheck="false" value={notesValue} onChange={handleValueChange(setNotesValue)}></textarea>
     </div>
   </div>
 }
