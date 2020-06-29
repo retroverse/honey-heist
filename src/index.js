@@ -5,5 +5,4 @@ import '../static/index.css'
 
 import App from './App'
 
-
 render(<App />, document.querySelector('#react-root'))
