@@ -1,0 +1,38 @@
+.character-box {
+  width: max-content;
+  height: max-content;
+  margin-bottom: 30px;
+  padding: 20px;
+  line-height: 40px;
+
+  font-size: 25px;
+  border-radius: 5px;
+  background: var(--very-light-yellow);
+  box-shadow: rgba(190, 124, 11, 0.79) 3px 2px 7px;
+}
+
+.character-box > .gap {
+  margin-left: 7px;
+}
+
+.character-box-field {
+  width: min-content;
+  padding: 4px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+
+  font-size: 23px;
+  background-color: var(--light-yellow);
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  font-weight: bold;
+  font-style: italic;
+  font-family: var(--bear-font);
+  color: var(--bear-text);
+}
+
+.character-box-field::placeholder {
+  color: var(--bear-font);
+  opacity: 40%;
+}

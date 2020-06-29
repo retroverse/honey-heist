@@ -1,0 +1,25 @@
+.app {
+  width: 95%;
+  padding: 30px;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  background: var(--slightly-dark-yellow);
+  border-radius: 5px;
+  box-shadow: rgba(146, 146, 146, 0.68) 3px 3px 6px;
+}
+
+.app-header {
+  margin-bottom: 25px;
+  color: rgb(153, 86, 0);
+  font-size: 60px;
+}
+
+.app-header > .honey {
+  font-family: var(--bear-font);
+}
+
+.app-header > .heist {
+  font-family: var(--criminal-font);
+}

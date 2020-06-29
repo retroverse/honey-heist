@@ -6,8 +6,8 @@
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
-  font-family: Arial;
 
+  --slightly-dark-yellow: #fff077;
   --light-yellow: #f9f4cb;
   --darker-yellow: #c7b216;
   --dark-yellow: rgb(255, 236, 96);
