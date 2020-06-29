@@ -11,3 +11,7 @@
   background: var(--very-light-yellow);
   box-shadow: rgba(190, 124, 11, 0.79) 3px 2px 7px;
 }
+
+.introduction-box a {
+  color: var(--bear-text);
+}
