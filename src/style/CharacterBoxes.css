@@ -38,6 +38,7 @@
 
 .skill-box {
   display: grid;
+  width: 100%;
   grid-template-rows: 1fr 1.5fr;
   justify-items: center;
 }

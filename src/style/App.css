@@ -10,14 +10,24 @@
   box-shadow: rgba(146, 146, 146, 0.68) 3px 3px 6px;
 }
 
-.app > .boxes {
+.app-contents {
+  width: 85%;
+  margin: auto;
   display: grid;
-  grid-template-columns: minmax(max-content, 10px) 1fr;
+  justify-items: center;
+}
+
+.app > .app-contents > .boxes {
+  display: grid;
+  width: 100%;
+  grid-template-columns: minmax(max-content, 0px) 1fr;
   row-gap: 30px;
   column-gap: 30px;
 }
 
 .app-header {
+  width: 100%;
+  text-align: left;
   margin-bottom: 25px;
   color: rgb(153, 86, 0);
   font-size: 60px;
