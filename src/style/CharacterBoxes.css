@@ -35,3 +35,22 @@
   color: var(--bear-font);
   opacity: 40%;
 }
+
+.skill-box {
+  display: grid;
+  grid-template-rows: 1fr 1.5fr;
+  justify-items: center;
+}
+
+.skill-box-label {
+  width: max-content;
+  height: max-content;
+  background: var(--light-yellow);
+  padding: 10px;
+  border-radius: 25px;
+}
+
+.species-label {
+  display: inline;
+  font-weight: bold;
+}
