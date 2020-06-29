@@ -4,6 +4,9 @@
   "description": "Character viewer for honey heist RPG",
   "main": "index.js",
   "scripts": {
+    "start": "parcel static/index.html",
+    "build": "parcel build static/index.html --public-url http://ewanb.me/honey-heist/",
+    "build-local": "parcel build static/index.html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -21,9 +24,11 @@
   },
   "homepage": "https://github.com/retroverse/honey-heist#readme",
   "dependencies": {
-    "parcel-bundler": "^1.12.4",
     "query-string": "^6.13.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4"
   }
 }
