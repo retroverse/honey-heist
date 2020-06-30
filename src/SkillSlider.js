@@ -42,7 +42,7 @@ const SkillSliderBox = ({position, active, onSelect}) => {
       {position === MAX_SKILL && <BearImage />}
       {position === 0 && <ThiefImage />}
     </button>
-    <h3 className='skill-slider-box-label criminal'>{MAX_SKILL - position}</h3>
+    <h3 className={`skill-slider-box-label criminal  ${active && 'active'}`}>{MAX_SKILL - position}</h3>
   </div>
 }
 
