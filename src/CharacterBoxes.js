@@ -10,7 +10,11 @@ const descriptors = [
   'retired',
   'unhinged',
   'slick',
-  'incompetent'
+  'incompetent',
+  'psychic',
+  'arrogant',
+  'overzealous',
+  'clumsy'
 ]
 
 const species = [
@@ -19,7 +23,11 @@ const species = [
   'panda',
   'black bear',
   'sun bear',
-  'honey badger'
+  'honey badger',
+  'sloth bear',
+  'spectacled bear',
+  'brown bear',
+  'beaver'
 ]
 
 const roles = [
@@ -28,17 +36,33 @@ const roles = [
   'driver',
   'hacker',
   'thief',
-  'face'
+  'face',
+  'gymnast',
+  'alcoholic',
+  'capitalist',
+  'daredevil',
+  'engineer'
 ]
 
 const skills = {
   'grizzly bear': 'Terrify',
   'polar bear': 'Swim',
-  'panda': 'Eat Bamboo-Like',
+  'panda': 'Charm',
   'black bear': 'Climb',
   'sun bear': 'Sense Honey',
   'honey badger': 'Carnage',
+  'sloth bear': 'Stealth',
+  'spectacled bear': 'Enhanced Sight',
+  'brown bear': 'Fish',
+  'beaver': 'Gnaw'
 }
+
+const isVowel = str =>
+    str == 'a' ||
+    str == 'e' ||
+    str == 'i' ||
+    str == 'o' ||
+    str == 'u'
 
 const handleValueChange = (cb) => ({ target: { value }}) => cb(value)
 
@@ -52,7 +76,7 @@ const CharacterBoxes = ({}) => {
     <div className='character-box bear'>
       Hi!
       I am <input type='text' value={nameValue} onChange={handleValueChange(setNameValue)} placeholder='name' className='character-box-field'/>. <br />
-      I am a{(descriptorValue[0] === 'u' || descriptorValue[0] == 'i') && 'n'} <FieldSelect value={descriptorValue} onChange={handleValueChange(setDescriptorValue)} options={descriptors}/><span className='gap'/>
+      I am a{isVowel(descriptorValue[0]) && 'n'} <FieldSelect value={descriptorValue} onChange={handleValueChange(setDescriptorValue)} options={descriptors}/><span className='gap'/>
       <FieldSelect value={speciesValue} onChange={handleValueChange(setSpeciesValue)} options={species}/>, <br />
       the <FieldSelect value={roleValue} onChange={handleValueChange(setRoleValue)} options={roles}/> of the operation.
     </div>
