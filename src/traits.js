@@ -51,3 +51,15 @@ export const skills = {
   'beaver': 'Gnaw'
 }
 
+export const flavours = {
+    'grizzly bear': 'Scare them into submission',
+    'polar bear': 'Your aquatic ability astounds all',
+    'panda': 'Your inherent charisma bends others to your will',
+    'black bear': 'For you, every wall is a ladder',
+    'sun bear': 'Honey fears you',
+    'honey badger': 'Oh god, there\'s so much blood...',
+    'sloth bear': 'You can sneak up on shadows',
+    'spectacled bear': 'Awesome acuity',
+    'brown bear': 'Water born creatures love to hate you',
+    'beaver': 'Get that wood out of the way'
+}

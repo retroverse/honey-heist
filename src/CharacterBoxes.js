@@ -1,9 +1,8 @@
 import React, { useState } from 'react'
 
-import {species, roles, skills, descriptors} from './traits'
+import { species, roles, skills, descriptors, flavours } from './traits'
 import { useQueryParam } from './hooks/queryParam'
 import './style/CharacterBoxes.css'
-
 
 const isVowel = str =>
     str == 'a' ||
@@ -56,6 +55,7 @@ const CharacterBoxes = ({}) => {
       <div className='skill-box-label'>
         <h3> { skills[speciesValue] } </h3>
       </div>
+      <h4 className='skill-flavour-label'> { flavours[speciesValue]} </h4>
     </div>
   </>
 }
