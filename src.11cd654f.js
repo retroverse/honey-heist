@@ -43,4 +43,4 @@ module.exports="http://ewanb.me/honey-heist/thief.d3ffdecc.svg";
 },{"react":"n8MK","./SkillSlider":"ETA6","./CharacterBoxes":"gaTj","./IntroductionBox":"t25b","./NotesBox":"BqYR","./style/App.css":"vKFU"}],"uBxZ":[function(require,module,exports) {
 "use strict";var e=u(require("react")),r=require("react-dom");require("../static/index.css");var t=u(require("./App"));function u(e){return e&&e.__esModule?e:{default:e}}(0,r.render)(e.default.createElement(t.default,null),document.querySelector("#react-root"));
 },{"react":"n8MK","react-dom":"NKHc","../static/index.css":"vKFU","./App":"eBcb"}]},{},["uBxZ"], null)
-//# sourceMappingURL=http://ewanb.me/honey-heist/src.2d790f61.js.map
+//# sourceMappingURL=http://ewanb.me/honey-heist/src.11cd654f.js.map
